@@ -11,9 +11,8 @@
 
 *A modern productivity web app designed for structured focus sessions, task management, collaboration, and analytics.*
 
-[🚀 Live Demo](https://focusmate25.netlify.app) • [🛠️ API](https://focusmate-6jvj.onrender.com) • [🎨 Figma](https://www.figma.com/proto/ksczguqzAikfA2AAfQjo76/FocusMate?node-id=0-1)  
+[🚀 Live Demo](https://focusmate25.netlify.app)     [🎨 Figma](https://www.figma.com/proto/ksczguqzAikfA2AAfQjo76/FocusMate?node-id=0-1)  
 
-![FocusMate Preview](https://via.placeholder.com/800x400/0f172a/ffffff?text=FocusMate+Dashboard)
 
 </div>
 
