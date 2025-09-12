@@ -9,7 +9,7 @@ require('dotenv').config();
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://focus-mate-sage.vercel.app/', 'https://focus-mate-5.onrender.com'],
+  origin: ['http://localhost:5173', 'https://focus-mate-sage.vercel.app'],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
