@@ -9,7 +9,7 @@ require('dotenv').config();
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://focus-mate-q95z.vercel.app/'],
+  origin: ['http://localhost:5173', 'https://focus-mate-q95z-6feqbu3tg-kartik-bhardwajs-projects-ce1937d6.vercel.app/'],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
