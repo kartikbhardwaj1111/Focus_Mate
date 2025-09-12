@@ -229,7 +229,7 @@ useEffect(() => {
 
   useEffect(() => {
     const fetchStats = async() => {
-        const res = await axios.get(`${API_URL}/stats`,{
+        const res = await axios.get(`${API_URL}/api/stats`,{
           withCredentials: true
         })
         const data = res.data; 

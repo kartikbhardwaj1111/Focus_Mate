@@ -212,7 +212,7 @@ const TasksPage = () => {
   
   useEffect(() => {
     const fetchTasks = async () => {
-      const res = await axios.get(`${API_URL}/tasks`, {
+      const res = await axios.get(`${API_URL}/api/tasks`, {
         withCredentials: true,  
       });
       if (res.status === 200) {
@@ -255,7 +255,7 @@ const TasksPage = () => {
   };
 
   const handleSaveNew = async(data) => {
-    const res = await axios.post(`${API_URL}/tasks`, data, {
+    const res = await axios.post(`${API_URL}/api/tasks`, data, {
       withCredentials: true
     })
     if (res.status !== 201) {
@@ -267,7 +267,7 @@ const TasksPage = () => {
   };
 
   const handleSaveEdit = async(data) => {
-    const res = await axios.put(`${API_URL}/tasks/${data._id}`, data, {
+    const res = await axios.put(`${API_URL}/api/tasks/${data._id}`, data, {
       withCredentials: true,
     });
     if (res.status !== 200) {
@@ -280,14 +280,14 @@ const TasksPage = () => {
 
   const handleDelete = async (task) => {
     if (!window.confirm('Delete this task?')) return;
-    await axios.delete(`${API_URL}/tasks/${task._id}`, {
+    await axios.delete(`${API_URL}/api/tasks/${task._id}`, {
       withCredentials: true,
     });
     setTasks((prev) => prev.filter((t) => t._id !== task._id));
   };
 
   const handleChangePriority = async(id, priority) => {
-    const res = await axios.patch(`${API_URL}/tasks/${id}`, { priority }, {
+    const res = await axios.patch(`${API_URL}/api/tasks/${id}`, { priority }, {
       withCredentials: true,
     });
     if (res.status !== 200) {

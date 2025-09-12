@@ -109,7 +109,7 @@ const Settings = () => {
     // keep in sync if AuthContext changes mid-session
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`${API_URL}/user`, { withCredentials: true });
+        const res = await axios.get(`${API_URL}/api/user`, { withCredentials: true });
         if (res.status === 200) {
           const u = res.data;
           console.log("User fetched successfully:", u);
@@ -157,7 +157,7 @@ const onImageChange = async (e) => {
     // swap preview with final Cloudinary URL
     setImage(url);
     // auto-save to backend with only image field (avoid overwriting name/email if not loaded)
-    await axios.put(`${API_URL}/user`, { image: url }, { withCredentials: true });
+    await axios.put(`${API_URL}/api/user`, { image: url }, { withCredentials: true });
     setSavedAt(new Date());
   } catch (err) {
     console.error("Image upload failed:", err);
@@ -176,7 +176,7 @@ const onSave = async (e) => {
   try {
     const payload = { name, email, image };
     // Save to backend and get updated profile back (optional improvement)
-    const res = await axios.put(`${API_URL}/user`, payload, { withCredentials: true });
+    const res = await axios.put(`${API_URL}/api/user`, payload, { withCredentials: true });
 
     // Optionally persist preferences locally
     writeJSON(PROFILE_KEY, { name, email, image });

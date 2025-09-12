@@ -310,7 +310,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchStats = async() => {
-        const res = await axios.get(`${API_URL}/stats`,{
+        const res = await axios.get(`${API_URL}/api/stats`,{
           withCredentials: true
         })
         const data = res.data; 
@@ -345,7 +345,7 @@ const Dashboard = () => {
   useEffect(() => {
   const fetchTasks = async () => {
     try {
-      const res = await axios.get(`${API_URL}/tasks`, {
+      const res = await axios.get(`${API_URL}/api/tasks`, {
         withCredentials: true,
       });
       if (res.status === 200) {
