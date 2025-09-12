@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../utils/api.js';
 import axios from 'axios';
 import GoogleLoginButton from '../components/GoogleLoginButton.jsx';
-const API_URL = import.meta.env.VITE_API_URL || '/api'; // Vite proxy to http://localhost:3000 in dev
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 // Simple animation variants for staggered form fields
 const formContainer = {

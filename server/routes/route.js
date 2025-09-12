@@ -10,7 +10,6 @@ const {sendUser, updateUser} = require('../controllers/User');
 //Authentication
 router.post('/auth/register', signup);
 router.post('/auth/login', login);
-router.post('/auth/google', googleAuth);
 router.post('/auth/logout', require('../controllers/Auth').logout);
 
 //User
