@@ -53,10 +53,17 @@ const GoogleLoginButton = ({ onSuccess, onError }) => {
         if (!idToken) return onError?.('Google sign-in failed.');
         try {
           setSubmitting(true);
+          console.log('Attempting Google auth with URL:', `${API_URL}/auth/google`);
           const res = await axios.post(
             `${API_URL}/auth/google`,
             { idToken },
-            { withCredentials: true, timeout: 15000 }
+            { 
+              withCredentials: true, 
+              timeout: 15000,
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }
           );
           if (res.status === 200) {
             onSuccess?.();
@@ -64,7 +71,8 @@ const GoogleLoginButton = ({ onSuccess, onError }) => {
             onError?.('Unable to sign in with Google.');
           }
         } catch (err) {
-          const msg = err?.response?.data?.message || 'Google sign-in failed.';
+          console.error('Google auth error:', err);
+          const msg = err?.response?.data?.message || err?.message || 'Google sign-in failed.';
           onError?.(msg);
         } finally {
           setSubmitting(false);
