@@ -50,7 +50,7 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV}`);
-  console.log(`CORS origins: http://localhost:5173, https://focus-mate-self.vercel.app`);
+  console.log(`CORS origins: http://localhost:5173, https://focus-mate-sage.vercel.app`);
 });
 
 module.exports = app;
