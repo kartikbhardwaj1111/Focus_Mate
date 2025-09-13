@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import api from '../utils/api.js';
 import axios from 'axios';
-import GoogleLoginButton from '../components/GoogleLoginButton.jsx';
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 // Simple animation variants for staggered form fields
@@ -306,32 +306,7 @@ const AuthJoin = () => {
               {loading ? 'Please wait…' : activeIsLogin ? 'Login' : 'Create account'}
             </motion.button>
 
-            {/* Divider */}
-            <div className="relative py-2">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-white/10" />
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-[#0f1113]/90 px-2 text-xs text-white/50">or continue with</span>
-              </div>
-            </div>
 
-            {/* Google Sign-In */}
-            <div className="relative">
-              <motion.div
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, ease: 'easeOut' }}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] p-1"
-              >
-                <div className="rounded-2xl bg-[#0f1113]/80 p-3">
-                  <GoogleLoginButton
-                    onSuccess={() => navigate('/dashboard', { replace: true })}
-                    onError={(msg) => setError(msg)}
-                  />
-                </div>
-              </motion.div>
-            </div>
           </motion.form>
         </motion.div>
       </motion.main>

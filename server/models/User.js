@@ -11,22 +11,10 @@ const User = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    // Password is required for local accounts, optional for Google accounts
     password: {
         type: String,
-        required: function () {
-            return this.provider !== 'google';
-        },
+        required: true,
         minlength: 8,
-    },
-    provider: {
-        type: String,
-        enum: ['local', 'google'],
-        default: 'local',
-    },
-    googleId: {
-        type: String,
-        default: undefined,
     },
     createdAt: {
         type: Date,
