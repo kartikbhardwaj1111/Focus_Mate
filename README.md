@@ -11,7 +11,7 @@
 
 *A modern productivity web app designed for structured focus sessions, task management, collaboration, and analytics.*
 
-[🚀 Live Demo](https://focus-mate-self.vercel.app/)     [🎨 Figma](https://www.figma.com/proto/ksczguqzAikfA2AAfQjo76/FocusMate?node-id=0-1)  
+[🚀 Live Demo](https://focus-mate-sage.vercel.app/)     [🎨 Figma](https://www.figma.com/proto/ksczguqzAikfA2AAfQjo76/FocusMate?node-id=0-1)  
 
 
 </div>
